@@ -1,0 +1,191 @@
+/* 
+    Document   : extend-responder
+    Created on : Aug 9, 2014, 6:57:07 PM
+    Date Revised: Aug 21, 2014
+    Author     : Larry J. Lane
+    Description:
+
+        This file is used to extend or overide the responder
+        style sheet. It is provided so that the end user can
+        peform styling on responder without having to navigate
+        through the core css.
+*/
+
+body {
+         
+         font-size:16px;/*<font size> */
+         font-family:Georgia;/*<font family>*/
+        
+         
+         
+       }
+       
+ #menu-button{
+    
+    padding-top:10px;/*provide some spacing above the #menu button*/
+    
+}
+       #wrap *,body{
+           
+           background-color:#99ff99;/*<background color>*/
+       }
+       
+       .center-vertical{
+           
+           /*begin styling to center content vertically*/
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  /*end styling to center content vertically*/
+           
+           
+       }
+       
+       
+       /*styling for #header*/
+       #header{
+           
+           background-color:black;/*<header background color>*/
+       }
+       
+       
+       /*styling for #footer*/
+       #footer{
+           
+  
+           
+           
+           background-color:black;/*<footer background color>*/
+           color:white;/*<footer text color>*/
+       }
+       
+       /*****begin menu styling section*****/
+       
+       /*sytling for the .mobile menu unordered list */
+       .mobile-menu ul{
+           
+           background-color:black;/*<mobile menu color>*/
+       }
+       
+       /*styling for link tags inside mobile menu*/
+       .mobile-menu li a{
+           
+           background-color:black;/*<mobile menu color>*/
+           color:white;/*<mobile menu link color>*/
+       }
+       
+       /*set the styling for the anchor tags*/
+      .mobile-menu a{
+     
+     text-decoration:none;/*<text decoration>*/
+     
+      }
+     .mobile-menu a:visited{
+         
+     color:white;/*<mobile menu link visited color>*/
+     
+      }
+      .mobile-menu a:focus{
+          
+     color:teal;/*<mobile menu link focus color>*/
+     
+     }
+    .mobile-menu a:hover{
+     
+     color:teal;/*<mobile menu link hover color>*/
+     text-transform:uppercase;
+     
+     }
+       
+       /*begin styling for the .nav-horizontal undordered list(non mobile)*/
+       
+       .nav-horizontal{
+  
+  
+          margin-left:10px;
+  
+       }
+       
+       
+       .nav-horizontal ul{
+           
+   
+
+           background-color:black;/*<menu color>*/
+           
+       }
+       .nav-horizontal li a{
+           
+           
+             
+           color:white;/*<horizontal menu link color>*/
+           
+       }
+       
+       
+      .nav-horizontal a:visited{
+         
+     color:white;/*<horizontal menu link visited color>*/
+     
+      }
+      .nav-horizontal a:focus{
+          
+     color:teal;/*<horizontal menu link focus color>*/
+     
+     }
+    .nav-horizontal a:hover{
+     
+     color:teal;/*<horizontal menu link hover color>*/
+     text-transform:uppercase;
+     
+     }
+     /*end styling for the .nav-horizontal undordered list(non mobile)*/
+       
+     /*****begin menu styling section*****/
+     
+       /*sytling for the .row class div container
+       note: this class contains the responsive columns
+             or in other words is the parent for all of the
+             responsive column classes.*/
+       
+       .row{
+           
+           
+           
+       }
+       /*styling for responsive columns*/
+       .row div{
+           
+            background-color:white;/*<column background color>*/
+            
+            /*provide some spacing in between columns*/
+            padding-left:5px;
+            padding-right:5px;
+            
+           
+            
+           
+       }
+       
+       #accordion h3,.row div h2, #center-column-title{
+           
+           color:#003333;
+           text-align:center;
+       }
+       #header{
+           
+           margin-bottom:20px;
+       }
+       
+       
+       
+    
+       
+
+       
+
+  
+ 
+
