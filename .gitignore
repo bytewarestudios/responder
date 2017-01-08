@@ -1,4 +1,2 @@
-/public_html/assets/
-/public_html/index.html
-/test/
-/nbproject/
+npm-debug.log
+dist

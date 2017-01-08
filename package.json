@@ -1,0 +1,29 @@
+{
+  "name": "responder",
+  "version": "1.0.0",
+  "description": "A responsive ui framework",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bytewarestudios/responder.git"
+  },
+  "keywords": [
+    "css",
+    "responsive",
+    "ui"
+  ],
+  "author": "Larry J Lane",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bytewarestudios/responder/issues"
+  },
+  "homepage": "https://github.com/bytewarestudios/responder#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.0.0"
+  }
+}
