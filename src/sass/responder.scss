@@ -172,7 +172,7 @@ html,body{
 
 
 
-/* responsive containter for the column classes*/
+/* responsive container for the column classes*/
 .row{
 
   /*set the max width of the .row class to
@@ -187,19 +187,11 @@ html,body{
 
 }
 
-.row div{
-  /* adjust the aspect of the font
-   * so it displays well and within the div elements
-   * when the screen is resized
-   *
-  */
-
-  font-size-adjust: 0.45;
-  line-height: 1.5;/*provide some spacing in between the lines*/
+.row > div{
 
   float:left;/*removes spacing between in line elements*/
   clear:none;/*removes spacing between in line elements*/
-  display:inline-block;/*make the div elements align horizonatally*/
+  display:inline-block;/*make the div elements align horizontally*/
 
 
   /*styling below prevents padding and borders from breaking
@@ -208,179 +200,22 @@ html,body{
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
   box-sizing: border-box;         /* Opera/IE 8+ */
 
-  /*allow long words to wrap to another line*/
-  word-wrap:break-word;
-
-
-
-
 
 }
 
-/*begin section for styling the column widths*/
+@mixin buildColumns() {
 
-.column1{
-  /*this column type is used for spacing only*/
-
-  max-width:1%;
-  width:1%;
-
-}
-.column8{
-
-
-  max-width:8.3333333333333333333333333333333%;
-  width:8.3333333333333333333333333333333%;
-
-}
-.column12{
-
-
-  max-width:12.5%;
-  width:12.5%;
-
-}
-.column33{
-
-
-  max-width:33.333333333333333333333333333333%;
-  width:33.333333333333333333333333333333%;
-
-}
-.column66{
-
-  max-width:66.666666666666666666666666666667%;
-  width:66.666666666666666666666666666667%;
-
+  $baseColumns: 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100;
+  $extraColumns: 1,100/12,100/3,(100/3) * 2;
+  $columns:join($baseColumns,$extraColumns,comma);
+  @each $column in $columns {
+    .column-#{floor($column)} {
+      width: #{$column + "%"};
+    }
+  }
 }
 
-
-
-.column5{
-
-
-  max-width:5%;
-  width:5%;
-
-}
-.column10{
-
-
-  max-width:10%;
-  width:10%;
-
-}
-.column15{
-
-
-  max-width:15%;
-  width:15%;
-
-}
-.column20{
-
-
-  max-width:20%;
-  width:20%;
-
-}
-.column25{
-
-
-  max-width:25%;
-  width:25%;
-
-}
-.column30{
-
-
-  max-width:30%;
-  width:30%;
-
-}
-.column35{
-
-
-  max-width:35%;
-  width:35%;
-
-}
-.column40{
-
-
-  max-width:40%;
-  width:40%;
-
-}
-.column45{
-
-
-  max-width:45%;
-  width:45%;
-
-}
-.column50{
-
-  max-width:50%;
-  width:50%;
-}
-.column55{
-
-  max-width:55%;
-  width:55%;
-}
-.column60{
-
-  max-width:60%;
-  width:60%;
-
-}
-.column65{
-
-  max-width:65%;
-  width:65%;
-}
-.column70{
-
-  max-width:70%;
-  width:70%;
-}
-.column75{
-
-  max-width:75%;
-  width:75%;
-}
-.column80{
-
-  max-width:80%;
-  width:80%;
-}
-.column85{
-
-  max-width:85%;
-  width:85%;
-}
-.column90{
-
-  max-width:90%;
-  width:90%;
-}
-.column95{
-
-  max-width:95%;
-  width:95%;
-}
-.column100{
-
-  max-width:100%;
-  width:100%;
-}
-
-/*end section for styling the column widths*/
-
-
-
-
+@include buildColumns();
 
 /*hides the content and eleminates the space taken up by the element
  use this column if you want to hide elements regardless of screen size*/
@@ -446,13 +281,8 @@ html,body{
 
 
 
-  .row div{
-
+  .row > div{
     max-width:100%;
-    width:100%;
-
-
-
   }
 
 
