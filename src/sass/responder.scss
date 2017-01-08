@@ -172,7 +172,7 @@ html,body{
 
 
 
-/* responsive containter for the column classes*/
+/* responsive container for the column classes*/
 .row{
 
   /*set the max width of the .row class to
@@ -187,19 +187,11 @@ html,body{
 
 }
 
-.row div{
-  /* adjust the aspect of the font
-   * so it displays well and within the div elements
-   * when the screen is resized
-   *
-  */
-
-  font-size-adjust: 0.45;
-  line-height: 1.5;/*provide some spacing in between the lines*/
+.row > div{
 
   float:left;/*removes spacing between in line elements*/
   clear:none;/*removes spacing between in line elements*/
-  display:inline-block;/*make the div elements align horizonatally*/
+  display:inline-block;/*make the div elements align horizontally*/
 
 
   /*styling below prevents padding and borders from breaking
@@ -207,12 +199,6 @@ html,body{
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
   box-sizing: border-box;         /* Opera/IE 8+ */
-
-  /*allow long words to wrap to another line*/
-  word-wrap:break-word;
-
-
-
 
 
 }
@@ -295,13 +281,8 @@ html,body{
 
 
 
-  .row div{
-
+  .row > div{
     max-width:100%;
-    width:100%;
-
-
-
   }
 
 
